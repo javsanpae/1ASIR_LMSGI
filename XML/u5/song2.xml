@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<albums xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="song2.xsd">
+  <disc serial="A3BF4C548" disc-length="34:38">
+
+        <song length="4:47">
+    
+            <title>Give it 2 me</title>
+        
+            <release-date>2008-01-10</release-date>
+            
+            <composers>
+                <composer>
+                    <name>Pharrell</name>
+                    <surname>Williams</surname>
+                </composer>
+            </composers>
+        
+            <producers>
+                <producer>
+                    <name>Pharrell</name>
+                    <surname>Williams</surname>
+                </producer>
+            </producers>
+        
+            <artist>Madonna</artist>
+        
+        </song>
+
+        <song length="3:24">
+    
+            <title>Pastillas de Freno</title>
+        
+            <release-date>2004-02-23</release-date>
+            
+            <composers>
+                <composer>
+                    <name>Estopa</name>
+                </composer>
+            </composers>
+        
+            <producers>
+                <producer>
+                    <name>Estopa</name>
+                </producer>
+            </producers>
+        
+            <artist>Estopa</artist>
+        
+        </song>
+        
+        <song length="3:52">
+    
+            <title>Black Summer</title>
+        
+            <release-date>2022-02-04</release-date>
+            
+            <composers>
+                <composer>
+                    <name>Red Hot Chili Peppers</name>
+                </composer>
+            </composers>
+        
+            <producers>
+                <producer>
+                    <name>Rick Rubin</name>
+                </producer>
+            </producers>
+        
+            <artist>Red Hot Chili Peppers</artist>
+        
+        </song>
+
+    </disc>
+</albums>

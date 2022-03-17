@@ -1,0 +1,74 @@
+
+    <naturalpark>
+
+        <!-- Name of the Natural/National Park -->
+
+        <name></name>
+
+        <!-- You have to put whether it is
+            considered as a National Park or not (YES/NO) -->
+
+        <isnational></isnational>
+
+        <!-- Inside of the chains, we will have information 
+        about the mountains, rivers and swamps.-->
+
+        <mountainchain>
+
+            <name></name>
+
+            
+
+            <mountain>
+
+                <!-- Name of the peak -->
+
+                <name></name>
+
+                <!-- Latitude and longitude -->
+
+                <coords></coords>
+
+                <!-- Measured in meters -->
+                <altitude></altitude>
+
+                <!-- Measured in meters -->
+                <prominence></prominence>
+
+                <!-- Include an URL with further information -->
+                <resource></resource>
+            </mountain>
+
+            <river>
+
+                <!-- Name of the river -->
+                <name></name>
+
+                <!-- Latitude and longitude-->
+                <coords></coords>
+
+                <!-- Measured in meters -->
+                <altitude></altitude>
+
+                <!-- Include an URL with further information -->
+                <resource></resource>
+            </river>
+
+            <swamp>
+
+                <!-- Name of the swamp -->
+                <name></name>
+
+                <!-- Latitude and longitude -->
+                <coords></coords>
+
+                <altitude></altitude>
+
+                <!-- Include an URL with further information -->
+                <resource></resource>
+            
+            </swamp>
+
+        </mountainchain>
+
+    </naturalpark>

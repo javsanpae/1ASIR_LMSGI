@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<song length="4:47" date-released="2008" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="song.xsd">
+    
+    <title>Give it 2 me</title>
+
+    <composers>
+        <composer>
+            <name>Pharrell</name>
+            <surname>Williams</surname>
+        </composer>
+    </composers>
+
+    <producers>
+        <producer>
+            <name>Pharrell</name>
+            <surname>Williams</surname>
+        </producer>
+    </producers>
+
+    <artist>Madonna</artist>
+
+</song>

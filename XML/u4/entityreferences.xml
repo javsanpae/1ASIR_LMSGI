@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comparison>
+
+    <!-- Instead of < we'll write &lt; (less than) -->
+    <character>6&lt;7</character>
+
+    <!-- Same with > (&gt; greater than) -->
+    <character>7&gt;6</character>
+
+    <!-- ampersand (&) is &amp; -->
+    <character>3 &amp; 6</character>
+
+    <!-- apostrophe (') is &apos; -->
+    <character>&apos;value&apos;</character>
+
+    <!-- Question mark (") is &quot; -->
+    <character>&quot;Quoted text&quot;</character>
+
+</comparison>

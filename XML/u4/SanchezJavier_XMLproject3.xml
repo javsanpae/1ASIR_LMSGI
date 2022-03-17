@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<naturalparks xmlns="Natural_And_National_Parks">
+
+    <naturalpark>
+
+        <!-- Name of the Natural/National Park -->
+
+        <name>Sierra Nevada National Park</name>
+
+        <!-- You have to put whether it is
+            considered as a National Park or not (YES/NO) -->
+
+        <isnational>Yes</isnational>
+
+        <!-- Inside of the chains, we will have information 
+        about the mountains, rivers and swamps.-->
+
+        <mountainchain>
+
+            <name>Sierra Nevada</name>
+
+            <mountain>
+
+                <!-- Name of the peak -->
+
+                <name>Mulhacén Peak</name>
+
+                <!-- Latitude and longitude -->
+
+                <coords>37°03'12"N 3°18'41"W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>3.479 meters</altitude>
+
+                <!-- Measured in meters -->
+                <prominence>3.285 meters</prominence>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/r6rG</resource>
+            </mountain>
+
+            <river>
+
+                <!-- Name of the river -->
+                <name>Genil River</name>
+
+                <!-- Latitude and longitude-->
+                <coords>37°31'37"N 5°19'00"W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>1.846 meters</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/e8Ki</resource>
+
+            </river>
+
+            <swamp>
+
+                <!-- Name of the swamp -->
+                <name>Caldera's Lagoon</name>
+
+                <!-- Latitude and longitude -->
+                <coords>37°03'17"N 3°19'44"W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>146 meters</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/1tvO</resource>
+            
+            </swamp>
+
+        </mountainchain>
+
+    </naturalpark>
+
+    
+    <naturalpark>
+
+        <!-- Name of the Natural/National Park -->
+
+        <name>Sierra de Baza Natural Park</name>
+
+        <!-- You have to put whether it is
+            considered as a National Park or not (YES/NO) -->
+
+        <isnational>No</isnational>
+
+        <!-- Inside of the chains, we will have information 
+        about the mountains, rivers and swamps.-->
+
+        <mountainchain>
+
+            <name>Sierra de Baza</name>
+
+            <mountain>
+
+                <!-- Name of the peak -->
+
+                <name>Santa Bárbara Peak</name>
+
+                <!-- Latitude and longitude -->
+
+                <coords>37°22'49″N 2°50'31″W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>2269 meters</altitude>
+
+                <!-- Measured in meters -->
+                <prominence>1155 meters</prominence>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/bkeL</resource>
+
+            </mountain>
+
+            <river>
+
+                <!-- Name of the river -->
+                <name></name>
+
+                <!-- Latitude and longitude-->
+                <coords></coords>
+
+                <!-- Measured in meters -->
+                <altitude></altitude>
+
+                <!-- Include an URL with further information -->
+                <resource></resource>
+
+            </river>
+
+            <swamp>
+
+                <!-- Name of the swamp -->
+                <name>Embalse del Negratín</name>
+
+                <!-- Latitude and longitude -->
+                <coords>37°34'20"N 2°53'16"O</coords>
+
+                <altitude>67 meters</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/RpVJ</resource>
+            
+            </swamp>
+
+        </mountainchain>
+
+    </naturalpark>
+
+    <naturalpark>
+
+        <!-- Name of the Natural/National Park -->
+
+        <name>Sierra de Huétor Natural Park</name>
+
+        <!-- You have to put whether it is
+            considered as a National Park or not (YES/NO) -->
+
+        <isnational>No</isnational>
+
+        <!-- Inside of the chains, we will have information 
+        about the mountains, rivers and swamps.-->
+
+        <mountainchain>
+
+            <name>Sierra de Huétor</name>
+
+            
+
+            <mountain>
+
+                <!-- Name of the peak -->
+
+                <name>Peñón de la Cruz</name>
+
+                <!-- Latitude and longitude -->
+
+                <coords>37°20'01"N 3°28'5,20″W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>2027 meters</altitude>
+
+                <!-- Measured in meters -->
+                <prominence>N/D</prominence>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/Th1M</resource>
+            </mountain>
+
+            <river>
+
+                <!-- Name of the river -->
+                <name>Darro River</name>
+
+                <!-- Latitude and longitude-->
+                <coords>37°13'48"N 3°31'18"W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>N/D</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/KaWZ</resource>
+            </river>
+
+            <swamp>
+
+                <!-- Name of the swamp -->
+                <name>Embalse de Quéntar</name>
+
+                <!-- Latitude and longitude -->
+                <coords>37°12'26"N 3°26'03"O</coords>
+
+                <altitude>100 meters</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/GQo3</resource>
+            
+            </swamp>
+
+        </mountainchain>
+
+    </naturalpark>
+
+    
+    <naturalpark>
+
+        <!-- Name of the Natural/National Park -->
+
+        <name>Sierra de Empanadas Natural Park</name>
+
+        <!-- You have to put whether it is
+            considered as a National Park or not (YES/NO) -->
+
+        <isnational>No</isnational>
+
+        <!-- Inside of the chains, we will have information 
+        about the mountains, rivers and swamps.-->
+
+        <mountainchain>
+
+            <name>Sierra de Empanadas</name>
+
+            
+
+            <mountain>
+
+                <!-- Name of the peak -->
+
+                <name>Cerro de la Empanada</name>
+
+                <!-- Latitude and longitude -->
+
+                <coords>37°55'N 2°47'O</coords>
+
+                <!-- Measured in meters -->
+                <altitude>2106 meters</altitude>
+
+                <!-- Measured in meters -->
+                <prominence>N/D</prominence>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/wDXQr</resource>
+            </mountain>
+
+            <river>
+
+                <!-- Name of the river -->
+                <name>N/D</name>
+
+                <!-- Latitude and longitude-->
+                <coords></coords>
+
+                <!-- Measured in meters -->
+                <altitude></altitude>
+
+                <!-- Include an URL with further information -->
+                <resource></resource>
+            </river>
+
+            <swamp>
+
+                <!-- Name of the swamp -->
+                <name>N/D</name>
+
+                <!-- Latitude and longitude -->
+                <coords></coords>
+
+                <altitude></altitude>
+
+                <!-- Include an URL with further information -->
+                <resource></resource>
+            
+            </swamp>
+
+        </mountainchain>
+
+    </naturalpark>
+
+    
+    <naturalpark>
+
+        <!-- Name of the Natural/National Park -->
+
+        <name>Sierra de Castril Natural Park</name>
+
+        <!-- You have to put whether it is
+            considered as a National Park or not (YES/NO) -->
+
+        <isnational>No</isnational>
+
+        <!-- Inside of the chains, we will have information 
+        about the mountains, rivers and swamps.-->
+
+        <mountainchain>
+
+            <name>Sierra de Castril</name>
+
+            
+
+            <mountain>
+
+                <!-- Name of the peak -->
+
+                <name>Tornajuelos</name>
+
+                <!-- Latitude and longitude -->
+
+                <coords>37°55'7"N 2°42'15"W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>2136 meters</altitude>
+
+                <!-- Measured in meters -->
+                <prominence>N/D</prominence>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/6bBE</resource>
+            </mountain>
+
+            <river>
+
+                <!-- Name of the river -->
+                <name>Castril River</name>
+
+                <!-- Latitude and longitude-->
+                <coords>37°48'8"N 2°47'9"W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>N/D</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/KHzv</resource>
+            </river>
+
+            <swamp>
+
+                <!-- Name of the swamp -->
+                <name>Laguna Seca</name>
+
+                <!-- Latitude and longitude -->
+                <coords>37°56'19"N 2°41'17"W</coords>
+
+                <altitude>1900 meters</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/Qmoz</resource>
+            
+            </swamp>
+
+        </mountainchain>
+
+    </naturalpark>
+
+    
+    <naturalpark>
+
+        <!-- Name of the Natural/National Park -->
+
+        <name>Sierra de Tejeda, Almijara and Alhama Natural Park</name>
+
+        <!-- You have to put whether it is
+            considered as a National Park or not (YES/NO) -->
+
+        <isnational>No</isnational>
+
+        <!-- Inside of the chains, we will have information 
+        about the mountains, rivers and swamps.-->
+
+        <mountainchain>
+
+            <name>Sierra de Tejeda, Almijara and Alhama</name>
+
+            
+
+            <mountain>
+
+                <!-- Name of the peak -->
+
+                <name>La Maroma</name>
+
+                <!-- Latitude and longitude -->
+
+                <coords>36°54'14"N 4°02'39"O</coords>
+
+                <!-- Measured in meters -->
+                <altitude>2069 meters</altitude>
+
+                <!-- Measured in meters -->
+                <prominence>1238 meters</prominence>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/Tv6h</resource>
+            </mountain>
+
+            <river>
+
+                <!-- Name of the river -->
+                <name>Green River</name>
+
+                <!-- Latitude and longitude-->
+                <coords>36°48'46"N 3°41'4"W</coords>
+
+                <!-- Measured in meters -->
+                <altitude>N/D</altitude>
+
+                <!-- Include an URL with further information -->
+                <resource>https://t.ly/m6UT</resource>
+            </river>
+
+        </mountainchain>
+
+    </naturalpark>
+
+</naturalparks>
