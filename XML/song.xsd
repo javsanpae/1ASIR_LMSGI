@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="song">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string"/>
+                <xs:element ref="composers"/>
+                <xs:element ref="producers"/>
+                <xs:element name="artist" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="length" type="xs:string"/>
+            <xs:attribute name="date-released" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="composers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="composer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="composer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="surname" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="producers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="producer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="producer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="surname" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

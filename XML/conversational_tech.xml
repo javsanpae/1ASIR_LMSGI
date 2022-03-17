@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conversational_tech xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="./conversational_tech.xsd">
+
+    <speech>
+        Human conversation is very complex because we do lot of things while to talk. This is very difficult to replicate. We have special skills to listen, speak and understand each other.
+        We want to have PC that are easy to use, we communicate talking so the idea is to have a PC which we can talk to and it’ll understand us.
+        Systems are not able to understand human language, so it takes it in a literal way.
+        Why human conversations are so complex?
+    </speech>
+
+    <communication_levels>
+
+        <linguistic_level>
+            What do you want to say? We hace to think about that and how are we going to ask for it.
+        </linguistic_level>
+    
+        <physiological_level>
+            Move your mouth, tongue, etc... To say what you want.
+        </physiological_level>
+
+        <acoustic_level>
+            The sound that travels through the air.
+        </acoustic_level>
+
+        <physiological_level>
+            A person listen to you.
+        </physiological_level>
+
+        <linguistic_level>
+            That person think about what you are saying.
+        </linguistic_level>
+    
+    </communication_levels>
+
+    <speech>
+        To do this, in addittion we have "super skills":
+    </speech>
+
+    <super_skills>
+
+        <ignore_noise>
+            We can ignore noise (talk while there’s a lot of noise). The microphone hears everything but we can focus on something in particular. Solution: Have a couple of microphones and calculate which is the one nearer and the rest of the sound is supressed.
+        </ignore_noise>
+
+        <listen_selectively>
+            We can talk to someone and listen another conversation. Once again, we can focus on something in particular.
+        </listen_selectively>
+
+        <convert_voice_words>
+            Words that sound the same but they’re different. Giving sense to the context/word.
+        </convert_voice_words>
+
+        <punctuations>
+            Punctuations and context are so important.
+        </punctuations>
+
+    </super_skills>
+
+    <automatic_speech_recognition>
+
+        <acoustic_model>
+            Teach the system how to convert the sound into letters, the opposite to teaching kids.
+        </acoustic_model>
+
+        <language_model>
+            Indicates the probability that certain words follow others.
+        </language_model>
+
+    </automatic_speech_recognition>
+
+    <speech>
+        We know the words, but what do they mean?
+    </speech>
+
+    <natural_language_processing>
+
+        <sinctactical_analysis>
+            We use to know what’s the structure, the action, the person of the action…
+        </sinctactical_analysis>
+
+        <machine_learning>
+            Show lots of structures to the machine and it tries to guess the meaning.
+        </machine_learning>
+
+    </natural_language_processing>
+
+    <speech>
+        Then we have the Natural Language Generation, which means choosing the words to provide a response. If you talk to a kid, you'll choose simple words and short phrases
+    </speech>
+
+    <speech>
+        The last part is the Speech to Text, which means converting text into voice (how to say the words, which entonation...
+    </speech>
+
+    <speech_to_text>
+        - Good Manners
+        - Affect
+        - Emotion
+        - Persona effect (you can see the personality of the person by the way he/she speaks).
+        - Relevance
+    </speech_to_text>
+
+</conversational_tech>

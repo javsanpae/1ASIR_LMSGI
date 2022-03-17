@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="conversational_tech">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="speech" type="xs:string" maxOccurs="unbounded" />
+                <xs:element ref="communication_levels" />
+                <xs:element ref="super_skills" />
+                <xs:element ref="automatic_speech_recognition" />
+                <xs:element ref="natural_language_processing" />
+                <xs:element name="speech_to_text" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="communication_levels">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="linguistic_level" type="xs:string" maxOccurs="2" />
+                <xs:element name="physiological_level" type="xs:string" maxOccurs="2" />
+                <xs:element name="acoustic_level" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="super_skills">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ignore_noise" type="xs:string" />
+                <xs:element name="listen_selectively" type="xs:string" />
+                <xs:element name="convert_voice_words" type="xs:string" />
+                <xs:element name="punctuations" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="automatic_speech_recognition">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="acoustic_model" type="xs:string" />
+                <xs:element name="language_model" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="natural_language_processing">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sinctactical_analysis" type="xs:string" />
+                <xs:element name="machine_learning" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
