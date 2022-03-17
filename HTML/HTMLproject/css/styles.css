@@ -1,0 +1,120 @@
+/* ESTILOS GENERALES */
+
+body {
+    margin: 0;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#favicon img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: darkslateblue;
+}
+
+#main {
+    width: 66%;
+    padding-left: 20px;
+    margin-left: 15px;
+    float: left;
+    font-style: italic;
+    background-color: #34568B;
+}
+
+#navm {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+    
+footer {
+    position: static;
+    bottom: 0%;
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+aside {
+    width: 30%;
+    padding-left: 20px;
+    margin-left: 15px;
+    float: right;
+    font-style: italic;
+    background-color: rgb(120, 237, 241);
+}
+
+.article {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #F7CAC9;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+/* ESTILOS DE LAS FUENTES DE LOS ARTÍCULOS */
+
+h1 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+h1 a {
+    text-decoration: none;
+    color: #000000;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div#article h1, div#article h2, div#article p {
+    margin-left: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+/* form.html STYLES */
+
+#paypalbutton {
+    margin-bottom: 50px;
+}
+
+
+#donation {
+    text-align: center;
+}
+
+#submit, #reset {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: rgb(153, 146, 49);
+}
+
+table, tr, td {
+	border: 1px solid black;
+}
+
