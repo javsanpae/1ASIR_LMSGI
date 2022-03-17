@@ -1,0 +1,28 @@
+film {
+    display: block;
+    font-size: 2em;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+actor {
+    font-size: 0.7em;
+    display: block;
+    top: 15px;
+    position: relative;
+}
+
+director {
+    font-size: 0.7em;
+    display: block;
+    top: 15px;
+    position: relative;
+}
+
+actor:before {
+    content: "Actor: ";
+}
+
+director:before {
+    content: "Director: ";
+}

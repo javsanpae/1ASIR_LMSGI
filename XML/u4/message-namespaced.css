@@ -1,0 +1,67 @@
+
+/* All the message will have these margins */
+message {
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-right: 50%;
+}
+
+/*All content inside of the message will have a line height */
+
+message * {
+    line-height: 25px;
+}
+
+/* This applies a separation between each text line */
+
+subject, from, to, paragraph{
+    display: block;
+}
+
+/* Here we'll insert the text that isn't written on the XML file */
+
+from::before {
+    content: "From: ";
+}
+
+to::before {
+    content: "To: ";
+}
+
+email::before {
+    content: "(";
+}
+
+email::after {
+    content: ")";
+}
+
+subject::before {
+    content: "Subject: ";
+}
+
+/* Here we are applying some styles to the font to make it look closer to
+the example shown */
+
+from, to {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+subject {
+    color: violet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
+/* As we can see on the document, the message has 
+a little margin at the left page, so we'll
+add an extra margin */
+
+paragraph {
+    margin-left: 30px;
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="song.css" type="text/css"?>
+<albums>
+    
+    <disc serial="A3BF4C548" disc-length="34:38">
+
+        <song length="4:47">
+    
+            <title>Give it 2 me</title>
+        
+            <release-date>2008-01-10</release-date>
+            
+            <composers>
+                <composer>
+                    <name>Pharrell</name>
+                    <surname>Williams</surname>
+                </composer>
+            </composers>
+        
+            <producers>
+                <producer>
+                    <name>Pharrell</name>
+                    <surname>Williams</surname>
+                </producer>
+            </producers>
+        
+            <artist>Madonna</artist>
+        
+        </song>
+
+        <song length="3:24">
+    
+            <title>Pastillas de Freno</title>
+        
+            <release-date>2004-02-23</release-date>
+            
+            <composers>
+                <composer>
+                    <name>Estopa</name>
+                </composer>
+            </composers>
+        
+            <producers>
+                <producer>
+                    <name>Estopa</name>
+                </producer>
+            </producers>
+        
+            <artist>Estopa</artist>
+        
+        </song>
+        
+        <song length="3:00">
+    
+            <title>Casino</title>
+        
+            <release-date>2021-12-20</release-date>
+            
+            <composers>
+                <composer>
+                    <name>Ayax y Prok</name>
+                </composer>
+            </composers>
+        
+            <producers>
+                <producer>
+                    <name>Israel B</name>
+                </producer>
+            </producers>
+        
+            <artist>FERNANDOCOSTA</artist>
+        
+        </song>
+
+    </disc>
+</albums>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element ref="contenido" />
+                <xs:element name="copyright" type="xs:int" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contenido">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="capitulo" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="capitulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tema" type="xs:string" />
+                <xs:element ref="seccion" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="materia" type="xs:string" use="optional" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="seccion">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute name="apartados" type="xs:int" use="required"/>
+                    <xs:attribute name="dificil" type="xs:string" use="optional" default="si"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
