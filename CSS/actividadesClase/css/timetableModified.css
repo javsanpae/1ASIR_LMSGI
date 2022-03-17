@@ -1,0 +1,37 @@
+* {
+    margin: 0 auto;
+}
+
+caption {
+    padding: 20px;
+}
+
+tr, th, td {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 2px;
+}
+div {
+    border: 2px solid black;
+}
+td {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+caption {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+th:hover {
+    background-color: cadetblue;
+}
+
+td:hover {
+    background-color: darkkhaki;
+}
+
+th {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+}

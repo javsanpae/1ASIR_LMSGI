@@ -1,0 +1,38 @@
+* {
+    margin: 100px;
+}
+
+#first {
+    text-align: left;
+    width: 1000px;
+    line-height: 30px;
+    font-style: normal;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#second {
+    text-align: right;
+    width: 800px;
+    line-height: 50px;
+    font-style: italic;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#third {
+    text-align: center;
+    width: 700px;
+    line-height: 80px;
+    font-style: oblique;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    text-indent: 200px;
+}
+
+p::first-letter {
+    text-transform: capitalize;
+}

@@ -1,0 +1,44 @@
+/* header {
+    width: 100%;
+}
+
+section {
+    float: left;
+    margin-right: 25%;
+    width: 75%;
+}
+
+aside {
+    float: right;
+    margin-left: 75%;
+    width: 25%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+} */
+
+
+header {
+    position: relative;
+    top: 0px;
+}
+
+section {
+    position: absolute;
+    left: 0px;
+    right: 40%;
+
+}
+
+aside {
+    position: absolute;
+    right: 0px;
+    left: 60%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+}

@@ -1,0 +1,45 @@
+#firstParagraph {
+    border: 5px solid red;
+    background-color: blue;
+    margin: 0px;
+    padding: 0px;
+}
+
+#secondParagraph {
+    border: 5px solid green;
+    background-color: red;
+    margin: 5px;
+    padding: 5px;
+}
+
+#thirdParagraph {
+    border: 5px solid blue;
+    background-color: green;
+    margin: 0px;
+    padding: 20px;
+}
+
+body {
+    margin: 0px;
+}
+
+
+div.a {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid red;
+}
+
+div.b {
+    position: absolute;
+    top: 0;
+    border: 3px solid blue;
+}
+
+div.c {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border: 3px solid green;
+}

@@ -1,0 +1,14 @@
+h1 {
+    color: red;
+}
+
+figcaption {
+    color: green;
+}
+
+
+section {
+    width: 45%;
+
+    float: left;
+}

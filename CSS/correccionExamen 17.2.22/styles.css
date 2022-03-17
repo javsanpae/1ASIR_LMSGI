@@ -1,0 +1,86 @@
+#wrapper {
+    position: absolute;
+    width: 1024px;
+    margin: 0 auto;
+    /* 0 for top and bottom and auto for the sides as the browser is going to calculate the same distance between the borders of the div and the b */
+
+    font-family: Arial, Verdana, Vivaldi;
+}
+
+nav {
+    position: relative;
+}
+
+nav li {
+    display: inline;
+
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#current-page {
+    font-weight: bold;
+}
+
+nav a:link {
+    color: black;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+nav a:active {
+    color: red;
+}
+
+#table-section {
+    width: 45%;
+    float: left;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    background-color: #808080;
+    color: white;
+    font-size: 90%;
+}
+
+td {
+    border: 1px solid black;
+    font-size: 80%;
+}
+
+#form-section {
+    width: 45%;
+    float: right;
+}
+
+input:focus, textarea:focus {
+    border-color: red;
+}
+
+#submit {
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    clear: both;
+    position: relative;
+}
+
+footer a {
+    font-style: italic;
+}

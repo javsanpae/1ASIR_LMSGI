@@ -1,0 +1,89 @@
+/* Previously done at the HTML module */
+
+form {
+    margin: 0 auto;
+    width: 700px;
+}
+#ape {
+    width: 50%;
+}
+#cp {
+    width: 10%;
+}
+#tel {
+    width: 13%;
+}
+#sug {
+    width: 80%;
+    height: 80%;
+}
+
+/* New CSS content */
+
+* {
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+}
+
+h1 {
+    font-size: 30px; 
+    font-weight: lighter;
+    font-style: italic;
+    color: #FFAA00;
+    background-color: blue;
+    border: 1px solid black;
+}
+
+h2 {
+    font-size: 23px;
+    font-weight: normal;
+    padding: 5px;
+    color: #FFAA00;
+    text-shadow: 2px 2px blue;
+}
+
+legend {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    border: 1px solid black;
+    background-color: cyan;
+}
+
+fieldset {
+    margin: 20px;
+    background-color: skyblue;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+label {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    background-color: skyblue;
+}
+
+input {
+    margin: 2px;
+}
+
+input[type=submit] {
+    background-color: rgb(255, 0, 119);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+label:hover {
+    color: blue;
+    font-style: oblique;
+
+}

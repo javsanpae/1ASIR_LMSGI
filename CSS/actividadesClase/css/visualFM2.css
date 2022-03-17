@@ -1,0 +1,23 @@
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+section {
+    position: absolute;
+    left: 0px;
+    width: 75%;
+
+}
+
+aside {
+    position: absolute;
+    right: 0px;
+    width: 25%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+}

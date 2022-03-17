@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/formModified.css">
+</head>
+<body>
+
+    <h1>TELEBIRRIA</h1>
+
+    <h2>PARA REALIZAR SU PEDIDO, RELLENE EL FORMULARIO</h2>
+
+       
+    <form action="mailto:jsanchez155@ieszaidinvergeles.org" method="post">
+
+        <fieldset id="field1">
+  
+          <legend>Datos personales y de envío</legend>
+  
+          
+            <label for="nom">Nombre</label>
+            <input type="text" name="nombre" id="nom"/>
+          
+  
+          
+  
+          
+            <label for="ape">Apellidos</label>
+            <input type="text" name="apellidos" id="ape"/>
+          
+  
+          
+  
+          
+            <label for="dom">Domicilio</label>
+            <input type="text" name="domicilio" id="dom"/>
+          
+  
+          
+  
+          
+            <label for="loc">Localidad</label>
+            <input type="text" name="localidad" id="loc"/>
+          
+  
+          
+  
+          
+            <label for="cp">Código postal</label>
+            <input id="cp" pattern="[0-9]{5}" type="text" name="codigoPostal" />
+          
+  
+          
+  
+          
+            <label for="tel">Teléfono</label>
+            <input id="tel" type="tel" name="telefono"/>
+          
+  
+        </fieldset>
+  
+        <fieldset>
+  
+          <legend>Elija la opción de entrega</legend>
+  
+          
+            <input type="radio" name="entrega" value="recogerLocal" checked="checked" id="rec"/>
+            <label for="rec">Recoger en el local</label>
+          
+  
+          
+  
+          
+            <input type="radio" name="entrega" value="enviarDomicilio" id="env"/>
+            <label for="env">Enviar a domicilio</label>
+          
+  
+        </fieldset>
+  
+        <fieldset>
+  
+          <legend>¿Quiere que le enviemos nuestras ofertas?</legend>
+  
+          
+            <input type="checkbox" name="enviarDomicilio" checked="checked" value="Sí" id="envdom"/>
+            <label for="envdom">Enviar al domicilio</label>
+          
+  
+          
+  
+          
+            <input type="checkbox" name="enviarMail" checked="checked" value="Sí" id="envmail"/>
+            <label for="envmail">Enviar por email</label>
+          
+  
+        </fieldset>
+  
+        <fieldset>
+  
+          <legend>Elija su menu</legend>
+  
+          
+            <label>Tamaño del bocadillo</label>
+          
+  
+          
+  
+          
+            
+            <select name="tamaño" size="4">
+              <option value="peq">pequeño</option>
+              <option value="med" selected="selected">mediano</option>
+              <option value="gra">grande</option>
+              <option value="eno">enorme</option>
+            </select>
+            
+          
+  
+          
+  
+          
+            <label for="cont">Contenido del bocadillo</label>
+          
+  
+          
+  
+          
+            
+              <select name="contenido" multiple="multiple" size="4">
+              <option value="anchoas">anchoas</option>
+              <option value="calamares">calamares</option>
+              <option value="mejillones">mejillones</option>
+              <option value="jamon">jamon</option>
+              <option value="york">york</option>
+              <option value="queso">queso</option>
+              <option value="atun">atun</option>
+              <option value="tortilla">tortilla</option>
+              </select>
+            
+          
+  
+          
+  
+  
+          
+            <label for="sug">Puede añadir alguna sugerencia</label>
+          
+  
+          
+  
+            <textarea name="sugerencias" id="sug" cols="30" rows="10" placeholder="Por ejemplo que calienten el pan, etc."></textarea>
+          
+  
+        </fieldset>
+  
+        
+
+        <input type="submit" value="Enviar"/>
+        
+        
+  
+      </form>
+</body>
+</html>
