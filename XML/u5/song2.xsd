@@ -24,7 +24,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="title" type="xs:string"/>
-                <xs:element name="release-date" type="xs:string"/>
+                <xs:element name="release-date" type="xs:gYear"/>
                 <xs:element ref="composers"/>
                 <xs:element ref="producers"/>
                 <xs:element name="artist" type="xs:string"/>
@@ -36,16 +36,7 @@
     <xs:element name="composers">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="composer"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="composer">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="surname" minOccurs="0" type="xs:string"/>
+                <xs:element name="composer" type="T_fullname"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -53,18 +44,18 @@
     <xs:element name="producers">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="producer"/>
+                <xs:element name="producer" type="T_fullname"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="producer">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="surname" minOccurs="0" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xs:complexType name="T_fullname">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="surname" minOccurs="0" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
 
 </xs:schema>
