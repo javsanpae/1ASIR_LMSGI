@@ -14,13 +14,25 @@
             <xs:sequence>
                 <xs:element name="Titulo" type="xs:string" />
                 <xs:element name="Duracion" type="xs:string" />
-                <xs:element name="Genero" type="xs:string" />
+                <xs:element ref="Genero" />
                 <xs:element ref="Actores" />
-                <xs:element name="Fecha" type="xs:integer" />
+                <xs:element ref="Fecha" />
                 <xs:element name="Director" type="xs:string" />
-                <xs:element name="Formato" type="xs:string" default="AVI" />
+                <xs:element ref="Formato" />
             </xs:sequence>
         </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Genero">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Sci-Fi and Fantasy"/>
+                <xs:enumeration value="Drama"/>
+                <xs:enumeration value="Comedy"/>
+                <xs:enumeration value="Horror"/>
+                <xs:enumeration value="Thriller"/>
+            </xs:restriction>
+        </xs:simpleType>
     </xs:element>
 
     <xs:element name="Actores">
@@ -32,12 +44,20 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="Fecha">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="1900"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
 
-
-
-
-
-
-
+    <xs:element name="Formato" default="AVI">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="AVI|MOV|MP4|FLV"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
 
 </xs:schema>
