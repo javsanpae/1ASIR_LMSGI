@@ -1,44 +1,44 @@
 <?xml version="1.0"?>
-<CatalogoPeliculas xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="ejercicio2.xsd">
+<moviesCatalog xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="ejercicio2.xsd">
 
-    <Pelicula>
-        <Titulo>The Matrix</Titulo>
-        <Duracion>136</Duracion>
-        <Genero>Sci-Fi and Fantasy</Genero>
-        <Actores>
+    <Movie>
+        <Title>The Matrix</Title>
+        <Length>136</Length>
+        <Genre>Sci-Fi and Fantasy</Genre>
+        <Actors>
             <Actor>Keanu Reeves</Actor>
             <Actor>Laurence Fishburne</Actor>
-            <Actriz>Carrie Ann Moss</Actriz>
-        </Actores>
-        <Fecha>1999</Fecha>
+            <Actress>Carrie Ann Moss</Actress>
+        </Actors>
+        <Date>1999</Date>
         <Director>Wachowski Brothers</Director>
-        <Formato>MP4</Formato>
-    </Pelicula>
+        <Format>MP4</Format>
+    </Movie>
 
-    <Pelicula>
-        <Titulo>Titanic</Titulo>
-        <Duracion>194</Duracion>
-        <Genero>Drama</Genero>
-        <Actores>
+    <Movie>
+        <Title>Titanic</Title>
+        <Length>194</Length>
+        <Genre>Drama</Genre>
+        <Actors>
             <Actor>Leonardo DiCaprio</Actor>
-            <Actriz>Kate Winslet</Actriz>
-        </Actores>
-        <Fecha>1999</Fecha>
+            <Actress>Kate Winslet</Actress>
+        </Actors>
+        <Date>1999</Date>
         <Director>James Cameron</Director>
-        <Formato>AVI</Formato>
-    </Pelicula>
+        <Format>AVI</Format>
+    </Movie>
 
-    <Pelicula>
-        <Titulo>The Sixth Sense</Titulo>
-        <Duracion>106</Duracion>
-        <Genero>Thriller</Genero>
-        <Actores>
+    <Movie>
+        <Title>The Sixth Sense</Title>
+        <Length>106</Length>
+        <Genre>Thriller</Genre>
+        <Actors>
             <Actor>Bruce Willis</Actor>
             <Actor>Haley Joel Osment</Actor>
-        </Actores>
-        <Fecha>1999</Fecha>
+        </Actors>
+        <Date>1999</Date>
         <Director>M. Night Shyamalan</Director>
-        <Formato>MP4</Formato>
-    </Pelicula>
+        <Format>MP4</Format>
+    </Movie>
 
-</CatalogoPeliculas>
+</moviesCatalog>

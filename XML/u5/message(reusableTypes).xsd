@@ -14,8 +14,8 @@
 
     <xs:complexType name="mail-contact">
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="email" type="xs:string"/>
+            <xs:element ref="name" />
+            <xs:element ref="email" />
         </xs:sequence>
     </xs:complexType>
 
@@ -25,6 +25,22 @@
             <xs:element name="paragraph" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
+</xs:element>
+
+<xs:element name="name">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]*[ \-'](Mc)?[A-Z][a-z]*" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="email">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-z\d-_\.]{6,64}@[a-z\d]{2,}([\-_\.][a-z\d]{2,})" />
+        </xs:restriction>
+    </xs:simpleType>
 </xs:element>
 
 </xs:schema>

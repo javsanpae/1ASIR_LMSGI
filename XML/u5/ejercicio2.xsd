@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="CatalogoPeliculas">
+    <xs:element name="moviesCatalog">
         <xs:complexType>
             <xs:sequence>
-                <xs:element ref="Pelicula" maxOccurs="unbounded" />
+                <xs:element ref="Movie" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType> 
     </xs:element>
 
-    <xs:element name="Pelicula">
+    <xs:element name="Movie">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Titulo" type="xs:string" />
-                <xs:element name="Duracion" type="xs:string" />
-                <xs:element ref="Genero" />
-                <xs:element ref="Actores" />
-                <xs:element ref="Fecha" />
+                <xs:element name="Title" type="xs:string" />
+                <xs:element name="Length" type="xs:positiveInteger" />
+                <xs:element ref="Genre" />
+                <xs:element ref="Actors" />
+                <xs:element ref="Date" />
                 <xs:element name="Director" type="xs:string" />
-                <xs:element ref="Formato" />
+                <xs:element ref="Format" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="Genero">
+    <xs:element name="Genre">
         <xs:simpleType>
             <xs:restriction base="xs:string">
                 <xs:enumeration value="Sci-Fi and Fantasy"/>
@@ -35,24 +35,24 @@
         </xs:simpleType>
     </xs:element>
 
-    <xs:element name="Actores">
+    <xs:element name="Actors">
         <xs:complexType>
-            <xs:choice maxOccurs="3">
+            <xs:choice minOccurs="0" maxOccurs="3">
                 <xs:element name="Actor" type="xs:string" />
-                <xs:element name="Actriz" type="xs:string" />
+                <xs:element name="Actress" type="xs:string" />
             </xs:choice>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="Fecha">
+    <xs:element name="Date">
         <xs:simpleType>
-            <xs:restriction base="xs:integer">
+            <xs:restriction base="xs:gYear">
                 <xs:minInclusive value="1900"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:element>
 
-    <xs:element name="Formato" default="AVI">
+    <xs:element name="Format" default="AVI">
         <xs:simpleType>
             <xs:restriction base="xs:string">
                 <xs:pattern value="AVI|MOV|MP4|FLV"/>

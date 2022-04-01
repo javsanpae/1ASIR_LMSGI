@@ -6,7 +6,7 @@
             <xs:sequence>
                 <xs:element name="titulo" type="xs:string"/>
                 <xs:element ref="contenido" />
-                <xs:element name="copyright" type="xs:int" />
+                <xs:element name="copyright" type="xs:positiveInteger" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
