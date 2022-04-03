@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<albums xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="song2.xsd">
+<albums xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="exercise4.xsd">
   <disc serial="A3BF4C548" disc-length="34:38">
 
         <song length="4:47">

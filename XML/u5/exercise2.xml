@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<moviesCatalog xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="ejercicio2.xsd">
+<moviesCatalog xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="exercise2.xsd">
 
     <Movie>
         <Title>The Matrix</Title>

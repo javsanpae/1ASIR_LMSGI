@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./ejercicio5.xsd">
+<libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./exercise5_v1.xsd">
 
     <titulo>Java y XML</titulo>
 
