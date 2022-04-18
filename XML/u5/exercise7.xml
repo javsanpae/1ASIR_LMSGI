@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<lending xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="exercise7.xsd">
+    
+    <lending_code>235D24</lending_code>
+    
+    <librarian>
+        <DNI>12345678E</DNI>
+        <name>John</name>
+        <surname>Doe</surname>
+    </librarian>
+
+    <reader>
+        <DNI>87654321A</DNI>
+        <name>Peter</name>
+        <surname>Parker</surname>
+        <tel>666555333</tel>
+
+        <address>
+            <way_type>street</way_type>
+            <name>undefined</name>
+            <number>2</number>
+            <floor>Left</floor>
+            <letter>B</letter>
+            <zip>30000</zip>
+            <city>Of Stars</city>
+            <town>Boston</town>
+        </address>
+    
+    </reader>
+
+    <lending_date>2021-04-03</lending_date>
+
+    <book>
+        <code>1515132</code>
+        <title>Strange Case of Dr Jekyll and Mr Hyde</title>
+        <author>Robert Louis Stevenson</author>
+    </book>
+
+</lending>

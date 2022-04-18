@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<studentStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="exercise6.xsd">
+
+    <student>
+        <name>Peter Parker</name>
+        <marks>9 Passed 9 10 9 9</marks>
+    </student>
+
+    <student>
+        <name>Ronald McDonald</name>
+        <marks>1 9 9 9 NoAssessment 9</marks>
+     </student>
+
+     <student>
+         <name>Waylon Smithers</name>
+         <marks>3 4 5 6 10 Passed</marks>
+     </student>
+
+</studentStorage>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!-- 
+    TITLE OF THE PROJECT: XML+Schema Project
+    NAMES OF THE AUTHORS: Javier Sánchez Páez
+    YEAR AND GROUP: 1st ASIR-A bil
+    DATE OF SUBMISSION: dd/mm/2022  
+    -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="games_library">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="game" maxOccurs="unbounded" /> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="game">
+        <xs:complexType>
+            <xs:all>
+                <!-- all of these elements are required but in the order we want -->
+                <xs:element ref="listed" />
+                <xs:element ref="name" />
+                <xs:element ref="game_shop" />
+                <xs:element ref="release_year" />
+                <!-- We'll do a reusable type here to have better and cleaner code -->
+                <xs:element name="developer_info" type="CT_info" />
+                <xs:element name="publisher_info" type="CT_info" />
+                <xs:element ref="user_reviews" />
+                <xs:element ref="tags" />
+                <xs:element name="trailer" type="xs:anyURI" />
+                <xs:element ref="compatibility" />
+                <xs:element ref="prices" />
+                <xs:element ref="dlc" />
+                <xs:element ref="languages" />
+                <xs:element ref="game_info" />
+            </xs:all>
+            <xs:attribute name="category" use="required" type="gameCategories" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="gameCategories">
+        <xs:restriction base="xs:string">
+            <!-- Here we have some categories/genres of games. We can add as much as we want -->
+            <xs:enumeration value="Racing" />
+            <xs:enumeration value="RPG" />
+            <xs:enumeration value="Adventure" />
+            <xs:enumeration value="Science/Fiction" />
+            <xs:enumeration value="Emulation" />
+            <xs:enumeration value="Roleplay" />
+            <xs:enumeration value="Simulation" />
+            <xs:enumeration value="Survival" />
+            <xs:enumeration value="Horror" />
+            <xs:enumeration value="Learning" />
+            <xs:enumeration value="Shooter" />
+            <xs:enumeration value="MMORPG" />
+            <xs:enumeration value="Combat" />
+            <xs:enumeration value="Casual" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="listed">
+        <xs:complexType />
+    </xs:element>
+
+    <xs:element name="name">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <!-- The name of the game must have at least 3 letter and a maximum of 50 letters -->
+                <xs:minLength value="3" />
+                <xs:maxLength value="50" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="game_shop">
+        <xs:simpleType>
+            <!-- Here we have some of the most known games platforms -->
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Steam" />
+                <xs:enumeration value="Origin" />
+                <xs:enumeration value="Battle.Net" />
+                <xs:enumeration value="GOG" />
+                <xs:enumeration value="Rockstar Games" />
+                <xs:enumeration value="Epic Games" />
+                <!-- In case we have an indie/independent game, we have this option available -->
+                <xs:enumeration value="Independent" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="release_year">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:gYear">
+                    <!-- This attribute is optional because if the game is from the 2000 for example we already know it's been released. We add the true by default because the majority of games on these webpages are already released -->
+                    <xs:attribute name="released" type="xs:boolean" use="optional" default="true" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- We'll use the same elements on developer and publisher info -->
+    <xs:complexType name="CT_info">
+        <xs:sequence>
+            <!-- Name and website are unbounded because a game can have several developers and/or publishers as we can see on the second game --> 
+            <xs:element name="name" type="xs:string" maxOccurs="unbounded" />
+            <xs:element name="website" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- An opinion on these platforms are composed of the posible review and the total of reviews -->
+    <xs:simpleType name="unionReviews">
+        <xs:union memberTypes="T_optionReviews T_totalReviews" />
+    </xs:simpleType>
+
+    <xs:simpleType name="T_optionReviews">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Not_Available" />
+            <xs:enumeration value="Very_Negative" />
+            <xs:enumeration value="Negative" />
+            <xs:enumeration value="Mixed" />
+            <xs:enumeration value="Positive" />
+            <xs:enumeration value="Very_Positive" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="T_totalReviews">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <!-- In case we have 0 reviews we'll use the "Not_Available" option on T_optionReviews -->
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="999999" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="listReviews">
+        <xs:list itemType="unionReviews" />
+    </xs:simpleType>
+
+    <xs:element name="user_reviews">
+        <xs:simpleType>
+            <xs:restriction base="listReviews">
+                <!-- We can have max. 2 arguments here, which will be the optionReview and the totalReview. -->
+                <xs:length value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- We can have as much tags as we want -->
+    <xs:element name="tags">
+        <xs:simpleType>
+            <xs:list itemType="xs:string" />
+        </xs:simpleType>
+    </xs:element>
+
+    <!-- Some of the most common gaming platforms -->
+    <xs:simpleType name="compatibilityList">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Windows" />
+            <xs:enumeration value="Mac_OS_X" />
+            <xs:enumeration value="Linux" />
+            <xs:enumeration value="Steam_OS" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Here we are doing a list of platforms in case there is more than 1 compatible platform -->
+    <xs:element name="compatibility">
+        <xs:simpleType>
+            <xs:list itemType="compatibilityList" />
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:simpleType name="listPrices">
+        <xs:list itemType="xs:double" />
+    </xs:simpleType>
+
+    <xs:element name="prices">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="listPrices">
+                    <xs:attribute name="has_discount" type="xs:boolean" use="required" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="dlc">
+        <xs:complexType>
+            <xs:attribute name="available" type="xs:boolean" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="languagesAvailable">
+        <xs:restriction base="xs:string">
+            <!-- Here I listed some of the most spoken languages on the world --> 
+            <xs:enumeration value="Spanish" />
+            <xs:enumeration value="English" />
+            <xs:enumeration value="French" />
+            <xs:enumeration value="Italian" />
+            <xs:enumeration value="German" />
+            <xs:enumeration value="Japanese" />
+            <xs:enumeration value="Mandarin" />
+            <xs:enumeration value="Hindi" />
+            <xs:enumeration value="Russian" />
+            <xs:enumeration value="Arabic" />
+            <xs:enumeration value="Portuguese" />
+            <xs:enumeration value="Bengali" />
+            <xs:enumeration value="Indonesian" />
+            <xs:enumeration value="Simplified_Chinese" />
+            <xs:enumeration value="Traditional_Chinese" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="languagesList">
+        <xs:list itemType="languagesAvailable" />
+    </xs:simpleType>
+
+    <xs:element name="languages">
+        <xs:simpleType>
+            <xs:restriction base="languagesList" />
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="game_info">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="description" type="xs:string" />
+                <xs:element name="about" type="xs:string" />
+                <xs:element ref="changelog" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Changelogs are used as a way of communication between the developer and the community to inform about new updates, solved errors and new content available --> 
+    <xs:element name="changelog">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="last_changelog" />
+                <xs:element name="changelog_title" type="xs:string" />
+                <xs:element name="changelog_description" type="xs:string" />
+                <xs:element name="changelog_link" type="xs:anyURI"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="last_changelog">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <!-- Pattern of the dd/mm/yyyy format -->
+                <xs:pattern value="\d{2}/\d{2}/\d{4}" />
+                <xs:length value="10"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+</xs:schema>

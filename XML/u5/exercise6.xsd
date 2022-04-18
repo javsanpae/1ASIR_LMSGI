@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="studentStorage">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="student" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>    
+    </xs:element>
+
+    <xs:element name="student">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name" />
+                <xs:element ref="marks" />
+            </xs:sequence>
+        </xs:complexType>    
+    </xs:element>
+
+    <xs:element name="name">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z][a-z]*[ \-'](Mc)?[A-Z][a-z]*" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:simpleType name="unionMarks">
+        <xs:union memberTypes="T_numericMarks T_writtenMarks" />
+    </xs:simpleType>
+
+    <xs:simpleType name="T_numericMarks">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="10" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="T_writtenMarks">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="NoAssessment"/>
+            <xs:enumeration value="Passed"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="listMarks">
+        <xs:list itemType="unionMarks" />
+    </xs:simpleType>
+
+    <xs:element name="marks">
+        <xs:simpleType>
+            <xs:restriction base="listMarks">
+                <xs:length value="6" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+</xs:schema>

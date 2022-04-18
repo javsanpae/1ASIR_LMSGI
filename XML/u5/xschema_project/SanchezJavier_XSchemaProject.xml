@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <!-- 
+    TITLE OF THE PROJECT: XML+Schema Project
+    NAMES OF THE AUTHORS: Javier Sánchez Páez
+    YEAR AND GROUP: 1st ASIR-A bil
+    DATE OF SUBMISSION: dd/mm/2022  
+    -->
+
+<games_library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./SanchezJavier_XSchemaProject.xsd">
+
+    <game category="Racing">
+
+        <listed />
+
+        <name>Assetto Corsa</name>
+
+        <game_shop>Steam</game_shop>
+        
+        <release_year released="true">2014</release_year>
+
+        <developer_info>
+            <name>Kumos Simulazioni</name>
+            <website>http://www.kunos-simulazioni.com/main/</website>
+        </developer_info>
+
+        <publisher_info>
+            <name>Kumos Simulazioni</name>
+            <website>http://www.kunos-simulazioni.com/main/</website>
+        </publisher_info>
+
+        <user_reviews>Very_Positive 1061</user_reviews>
+
+        <tags>Racing Cars Multiplayer Simulation Driving</tags>
+
+        <trailer>https://www.youtube.com/watch?v=Hndf5pyVVzc</trailer>
+
+        <compatibility>Windows Linux Steam_OS</compatibility>
+
+        <prices has_discount="true">3.99 2.13 7.93</prices>
+        <dlc available="true"/>
+        <languages>English Spanish Simplified_Chinese Traditional_Chinese</languages>
+
+        <game_info>
+            <description>Assetto Corsa v1.16 introduces the new "Laguna Seca" laser-scanned track, 7 new cars among which the eagerly awaited Alfa Romeo Giulia Quadrifoglio! Check the changelog for further info!</description>
+
+            <about>
+                NEXT GENERATION RACING SIMULATOR
+                Assetto Corsa features an advanced DirectX 11 graphics engine that recreates an immersive environment, dynamic lighthing and realistic materials and surfaces. The advanced physics engine is being designed to provide a very realistic driving experience, including features and aspects of real cars, never seen on any other racing simulator such as tyre flat spots, heat cycles including graining and blistering, very advanced aerodynamic simulation with active movable aerodynamics parts controlled in real time by telemetry input channels, hybrid systems with kers and energy recovery simulation. Extremely detailed with single player and multiplayer options, exclusive licensed cars reproduced with the best accuracy possible, thanks to the official cooperation of Car Manufacturers.
+                ASSETTO CORSA has been developed at the KUNOS Simulazioni office, located just inside the international racing circuit of Vallelunga, allowing the team to develop the game with the cooperation of real world racing drivers and racing teams.
+            </about>
+
+            <changelog>
+                
+                <last_changelog>16/02/2018</last_changelog>
+
+                <changelog_title>
+                    505 GAMES AND KUNOS ANNOUNCE THE RELEASE OF ASSETTO CORSA ULTIMATE EDITION
+                </changelog_title>
+                
+                <changelog_description>
+                    Kunos Simulazioni and 505 Games are proud to announce the Assetto Corsa Ultimate Edition; the most complete package ever conceived for the critically acclaimed and ground breaking racing simulator.
+
+                    Using laser scanning technology to deliver the highest level of accuracy possible, Assetto  Corsa Ultimate Edition boasts 33 track configurations from sixteen circuits, alongside an advanced physics engine built using practical knowledge acquired from the elite of motorsport, including features and aspects of real cars never seen on any other racing simulator, such as tyre flat spots, heat cycles, including graining and blistering.
+
+                    Check out now the Assetto Corsa website for updates: something big is going to happen!
+                </changelog_description>
+
+                <changelog_link>https://www.assettocorsa.it/505-games-and-kunos-announce-the-release-of-assetto-corsa-ultimate-edition/</changelog_link>
+
+            </changelog>
+        </game_info>
+    </game>
+
+    <game category="RPG">
+
+        <listed />
+
+        <name>Elden Ring</name>
+
+        <game_shop>Steam</game_shop>
+
+        <release_year released="true">2022</release_year>
+        
+        <developer_info>
+            <name>FromSoftware Inc</name>
+            <website>https://www.fromsoftware.jp/ww/</website>
+        </developer_info>
+
+        <publisher_info>
+            <name>FromSoftware Inc</name>
+            <name>BANDAI NAMCO ENTERTAINMENT</name>
+            <website>https://www.fromsoftware.jp/ww/</website>
+            <website>https://en.bandainamcoent.eu/</website>
+        </publisher_info>
+
+        <user_reviews>Very_Positive 111134</user_reviews>
+
+        <tags>Souls-like Dark_Fantasy PvP</tags>
+
+        <trailer>https://www.youtube.com/watch?v=OT8if6DXOFQ</trailer>
+
+        <compatibility>Windows</compatibility>
+
+        <prices has_discount="false">59.99 79.99</prices>
+
+        <dlc available="false" />
+
+        <languages>English French Italian German Spanish</languages>
+
+        <game_info>
+            <description>THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between</description>
+
+            <about>
+                A vast world where open fields with a variety of situations and huge dungeons with complex and three-dimensional designs are seamlessly connected. As you explore, the joy of discovering unknown and overwhelming threats await you, leading to a high sense of accomplishment.
+            </about>
+
+            <changelog>
+
+                <last_changelog>04/04/2022</last_changelog>
+
+                <changelog_title>Patch Notes Version 1.03.3</changelog_title>
+
+                <changelog_description>We are distributing this new update to fix a bug in patch 1.03.</changelog_description>
+
+                <changelog_link>https://store.steampowered.com/news/app/1245620/view/3184615391704558008</changelog_link>
+
+            </changelog>
+        </game_info>
+    </game>
+
+    <game category="Shooter">
+
+        <listed />
+
+        <name>Call Of Duty: Warzone</name>
+
+        <game_shop>Battle.Net</game_shop>
+
+        <release_year released="true">2020</release_year>
+        
+        <developer_info>
+            <name>Infinity Ward</name>
+            <name>Raven Software</name>
+            <website>https://www.infinityward.com</website>
+            <website>https://www.ravensoftware.com/</website>
+        </developer_info>
+
+        <publisher_info>
+            <name>Activision</name>
+            <website>https://www.activision.com/</website>
+        </publisher_info>
+
+        <user_reviews>Very_Positive 248221</user_reviews>
+
+        <tags>Shooter PvP Battle_Royale Rebirth</tags>
+
+        <trailer>https://www.youtube.com/watch?v=OT8if6DXOFQ</trailer>
+
+        <compatibility>Windows Mac_OS_X</compatibility>
+
+        <prices has_discount="false">0</prices>
+
+        <dlc available="true" />
+
+        <languages>English Hindi Traditional_Chinese Italian German Spanish</languages>
+
+        <game_info>
+            <description>Trouble is brewing deep beneath Caldera. Butcher has discovered once-secret laboratories where Nebula V bombs have been in production with the intent of wiping various metropolises off the map. Season Two of Call of Duty®: Warzone™ unlocks the Search and Deploy Event, where players are tasked with taking out Armored Transport trucks while infiltrating Chemical Research Laboratories before taking siege of the Chemical Factory. Take advantage of the Redeploy Balloon around Caldera to redeploy from hot engagements or from fast circling gas. And take to the air by piloting Bombers that can turn the tides of war in an instant. Season Two also brings new game features to Warzone™. Strap on your gas mask and drop in.
+            </description>
+
+            <about>
+                Buy the Season Two Battle Pass and get back up to 1300 CP as you level up. Use them to buy the next season’s Battle Pass so the action never stops.
+            </about>
+
+            <changelog>
+
+                <last_changelog>26/01/2022</last_changelog>
+
+                <changelog_title>BUG FIXES</changelog_title>
+
+                <changelog_description>Fixed collision issues with various elements across Caldera allowing Players to exploit/peek/shoot through them.</changelog_description>
+
+                <changelog_link>https://www.ravensoftware.com/community/2021/12/call-of-duty-vg-warzone-season-one-patch-notes</changelog_link>
+
+            </changelog>
+        </game_info>
+    </game>
+
+
+</games_library>
