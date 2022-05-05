@@ -1,0 +1,28 @@
+In this project you must use the three design models in order to create the
+optimal code, as well as:
+
+1. Complex Types.
+    a. Empty.                                   DONE (best_vehicle_prize)
+    b. Empty with attributes.                   DONE (extras)
+    c. With simple content and attributes.      DONE (release_year)          
+    d. With sequence of elements.               DONE 
+    e. With alternative elements.               DONE (tire_design y chassis_design)
+    f. With elements in no particular order.    DONE (car and motorcycle)
+    g. With simple content and elements.        falta 
+
+
+2. Simple Types.
+    a. Predefined.                              DONE (specs_url)
+    b. Built by restrictions, at least, with:
+        - Range of values.                      DONE (car_plate)
+        - String length.                        DONE (fullname) (car_plate)
+        - Number of digits.                     DONE (car_plate)
+        - Pattern.                              DONE (price)
+        - Enumeration.                          DONE (brands)
+    c. Built by unions.                         DONE (car_plate)
+    d. Built by lists.                          DONE (car_plate)
+3. Elements with minimum and maximum number of occurrences. DONE (car and motorcycle)
+4. Compulsory and optional attributes.          DONE (release_year.released / extras.available)
+5. Elements and/or attributes with default and fixed values. DONE (release_year.released)
+6. Extensions of complex types.                 DONE (T_vehicles)
+7. Groups of elements or attributes.            DONE (T_name)

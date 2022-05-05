@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<lending xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="exercise7.xsd">
+<lendings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="exercise7.xsd">
     
     <lending_code>235D24</lending_code>
     
@@ -36,4 +36,4 @@
         <author>Robert Louis Stevenson</author>
     </book>
 
-</lending>
+</lendings>

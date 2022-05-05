@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<html>
+    <head>
+        <title>La Tiendecilla</title>
+    </head>
+    <body>
+        <h1>Lo mejor de La Tiendecilla Sabidilla</h1>
+        <h2>Teléfono: 959871223</h2>
+        <h2>Nuestros mejores productos</h2>
+        <table border="1">
+
+            <tr>
+                <th>Código</th>
+                <th>Existencias</th>
+                <th>Artículo</th>
+            </tr>
+
+            <tr>
+                <td>92</td>
+                <td>10</td>
+                <td>Radio-Casette</td>
+            </tr>
+
+            <tr>
+                <td>103</td>
+                <td>50</td>
+                <td>Reloj Cocina</td>
+            </tr>
+
+            <tr>
+                <td>1312</td>
+                <td>3</td>
+                <td>Sofá</td>
+            </tr>
+
+        </table>
+
+    </body>
+
+
+</html>

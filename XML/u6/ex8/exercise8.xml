@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="exercise8.xsl" type="text/xsl"?>
+<liga>
+
+    <equipo>
+        <nombre>Real Madrid</nombre>
+        <puntuacion>78</puntuacion>
+        <victorias>24</victorias>
+        <empates>6</empates>
+        <derrotas>3</derrotas>
+    </equipo>
+
+    <equipo>
+        <nombre>FC Barcelona</nombre>
+        <puntuacion>63</puntuacion>
+        <victorias>18</victorias>
+        <empates>9</empates>
+        <derrotas>6</derrotas>
+    </equipo>
+
+    <equipo>
+        <nombre>Betis</nombre>
+        <puntuacion>57</puntuacion>
+        <victorias>17</victorias>
+        <empates>6</empates> 
+        <derrotas>10</derrotas>
+    </equipo>
+
+    <equipo>
+        <nombre>Málaga C.F.</nombre>
+        <puntuacion>99</puntuacion>
+        <victorias>33</victorias>
+        <empates>0</empates>
+        <derrotas>0</derrotas>
+    </equipo>
+
+    <equipo>
+        <nombre>Granada C.F.</nombre>
+        <puntuacion>77</puntuacion>
+        <victorias>22</victorias>
+        <empates>11</empates>
+        <derrotas>0</derrotas>
+    </equipo>
+
+</liga>

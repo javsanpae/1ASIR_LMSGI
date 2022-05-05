@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<vehicles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./XSchemaProject-sanchezJavier-fuentesHugo-diazDavid.xsd">
+
+    <car state="Second Hand">
+        <best_vehicle_prize />
+        <brand>Toyota</brand>
+        <model>Aygo</model>
+        <release_year released="true">2012</release_year>
+        <extras available="false" />
+        <specs_url>https://www.km77.com/coches/toyota/aygo/2012/5-puertas/live/aygo-5p-70-live/datos</specs_url>
+        <kilometers>144655</kilometers>
+        <price>3000€</price>
+        <vehicle_data>
+            <hp>70</hp>
+            <cilinders>3</cilinders>
+            <liters>1.2</liters>
+            <power_source>Gas</power_source>
+            <chassis_sn>648574860UVTEWNCI</chassis_sn>
+            <car_plate>4554 HKG</car_plate>
+        </vehicle_data>
+
+        <seller dni-nif="65431268R" sell_number="1">
+            <name>Honda Ocasion</name>
+            <email>sales@honda.com</email>
+            <tel_number>+34654925104</tel_number>
+        </seller>
+
+        <buyer dni-nif="27624524Y" sell_number="4">
+            <name>Javier Sánchez</name>
+            <email>jsanchez155@ieszaidinvergeles.org</email>
+            <tel_number>+34666666666</tel_number>
+        </buyer>
+
+        <equipment>Sport</equipment>
+        <doors>5</doors> 
+    </car>
+
+    <car state="Brand New">
+        <brand>Lexus</brand>
+        <model>LFA</model>
+        <release_year>2009</release_year>
+        <extras available="false" />
+        <specs_url>https://www.km77.com/coches/lexus/lfa/2010/coupe/estandar/lfa/datos</specs_url>
+        <kilometers>6477</kilometers>
+        <price>160000€</price>
+        <vehicle_data>
+            <hp>560</hp>
+            <cilinders>10</cilinders>
+            <liters>4.8</liters>
+            <power_source>Gas</power_source>
+            <chassis_sn>573582763IGNSHGIT</chassis_sn>
+            <car_plate>5664 GZL</car_plate>
+        </vehicle_data>
+
+        <seller dni-nif="65431268Q" sell_number="2">
+            <name>Hugo Fuentes</name>
+            <email>hfuentes2911@ieszaidinvergeles.org</email>
+            <tel_number>+34678912345</tel_number>
+        </seller>
+
+        <buyer dni-nif="27624594Y" sell_number="5">
+            <name>David Díaz</name>
+            <email>ddiaz197@ieszaidinvergeles.org</email>
+            <tel_number>+34620515151</tel_number>
+        </buyer>
+
+        <equipment>GT</equipment>
+        <doors>3</doors>
+    </car>
+
+    <motorcycle state="0KM">
+        <brand>Kawasaki</brand>
+        <model>Z900</model>
+        <release_year>2020</release_year>
+        <extras available="false" />
+        <specs_url>https://fichasmotor.com/kawasaki/kawasaki-z900-2020/</specs_url>
+        <kilometers>7221</kilometers>
+        <price>8000€</price>
+        <vehicle_data>
+            <hp>125</hp>
+            <cilinders>4</cilinders>
+            <liters>0.9</liters>
+            <power_source>Gas</power_source>
+            <chassis_sn>570237575AHFJBSIG</chassis_sn>
+            <car_plate>4302 LJM</car_plate>
+        </vehicle_data>
+
+        <seller dni-nif="69875244S" sell_number="3">
+            <name>Kawasaki Motors</name>
+            <email>sales@kawasaki.com</email>
+            <tel_number>+34878522165</tel_number>
+        </seller>
+
+        <buyer dni-nif="65431268Q" sell_number="6">
+            <name>Hugo Fuentes</name>
+            <email>hfuentes2911@ieszaidinvergeles.org</email>
+            <tel_number>+34678912345</tel_number>
+        </buyer>
+
+    </motorcycle>
+
+
+
+
+
+
+</vehicles>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <title>Ejercicio1C</title>
+    <style>
+                #neg {font-weight:bold}
+                #roj {color:red}
+                #az {color:blue}
+            </style>
+  </head>
+  <body>
+    <p id="neg">Hola Pepe</p>
+    <p id="roj">¿Cómo estás?</p>
+    <p id="az">Yo bien</p>
+</body>
+</html>

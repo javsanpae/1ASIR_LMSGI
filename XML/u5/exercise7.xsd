@@ -1,111 +1,138 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xs:element name="lendings">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="lending_code" maxOccurs="unbounded"/>
+      <xs:group ref="T_Identification"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+  <xs:element name="lending_code">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="T_Identification" />
+        <xs:element ref="Reader"/>
+        <xs:element name="Date" type="xs:date"/>
+        <xs:element ref="Book" maxOccurs="3"/>
+      </xs:sequence>
+        <xs:attribute name="Code" type="xs:ID"/>
+    </xs:complexType>
+  </xs:element>
+
+    
+    <xs:element name="Reader">
+     <xs:complexType>
+       <xs:sequence>
+              <xs:group ref="T_Identification"/>
+              <xs:element ref="Telephone"/>
+              <xs:element ref="Address"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+    
+    <xs:group name="T_Identification">
+      <xs:sequence>
+        <xs:element name="DNI" type="T_dni"/>
+        <xs:element name="Surname" type="T_name"/>
+      </xs:sequence>
+    </xs:group> 
     
 
-    <xs:element name="lending">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="lending_code" type="xs:string" />
-                <xs:element name="librarian" type="T_basicInfo" />
-                <xs:element name="reader" type="T_moreInfo"/>
-                <xs:element name="lending_date" type="xs:date" />
-                <xs:element ref="book" maxOccurs="3" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
 
-    <xs:complexType name="T_basicInfo">
-        <xs:sequence>
-            <xs:element ref="DNI" />
-            <xs:element name="name" type="xs:string" />
-            <xs:element name="surname" type="xs:string" />
-        </xs:sequence>
+  <xs:element name="Book">
+    <xs:complexType>
+     <xs:sequence>
+        <xs:element name="Title" type="xs:string"/>
+        <xs:element name="Author" type="xs:string"/>
+     </xs:sequence> 
+        <xs:attribute name="BookCode" type="xs:string"/>
     </xs:complexType>
+  </xs:element>
+  
+<xs:simpleType name="T_dni">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{8}[A-Z]"/>
+    </xs:restriction>
+</xs:simpleType>
+  
+  <xs:simpleType name="T_name">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"/>
+      <xs:maxLength value="50"/>
+      <xs:pattern value="[A-Z][a-z]( [A-Z][a-z])*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:element name="Telephone">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{9}"/> 
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+  
+ <xs:element name="Address">
+    <xs:complexType>
+     <xs:sequence>
+        <xs:element ref="Type_of_way"/>
+        <xs:element name="Name_of_the_way" type="xs:string"/>
+        <xs:element ref="Number"/>
+        <xs:element ref="Floor"/>
+        <xs:element ref="Letter"/>
+        <xs:element ref="ZIP"/>
+        <xs:element name="Town_or_City" type="T_name"/>
+     </xs:sequence> 
+    </xs:complexType>  
+  </xs:element>
+  
+  <xs:element name="Type_of_way">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Street"/>
+      <xs:enumeration value="Avenue"/>
+      <xs:enumeration value="Square"/>
+      <xs:enumeration value="Road"/>
+      <xs:enumeration value="Alley"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
 
-    <xs:complexType name="T_moreInfo">
-        <xs:complexContent>
-            <xs:extension base="T_basicInfo">
-                <xs:sequence>
-                    <xs:element ref="tel" />
-                    <xs:element ref="address" />
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
+  <xs:element name="Number">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{1,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>  
 
+  <xs:element name="Floor">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{1,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>  
 
-    <xs:element name="DNI">
-        <!-- Here we're only supporting spanish identifications -->
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="\d{8}[A-Z]" /> 
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:element>
+  <xs:element name="Letter">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>  
 
-    <xs:element name="tel">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <!-- Spanish telephone numbers -->
-                <xs:pattern value="\d{9}" /> 
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:element>
-
-    <xs:element name="address">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element ref="way_type" />
-                <xs:element name="name" type="xs:string"/>
-                <xs:element name="number" type="xs:positiveInteger" />
-                <xs:element name="floor" minOccurs="0" />
-                <xs:element ref="letter" minOccurs="0" />
-                <xs:element ref="zip" />
-                <xs:element name="city" type="xs:string" />
-                <xs:element name="town" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:element name="way_type">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <!-- We can do either this way (enumeration) or with a xs:pattern with pipes! -->
-                <xs:enumeration value="street" />
-                <xs:enumeration value="avenue" />
-                <xs:enumeration value="square" />
-                <xs:enumeration value="road" />
-                <xs:enumeration value="alley" />
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:element>
-
-    <xs:element name="letter">
-        <xs:simpleType>
-            <xs:restriction base="xs:string">
-                <xs:pattern value="[A-Z]" />
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:element>
-
-    <xs:element name="zip">
-        <xs:simpleType>
-            <xs:restriction base="xs:positiveInteger">
-                <xs:minInclusive value="1001" />
-                <xs:maxInclusive value="52080" />
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:element>
-
-    <xs:element name="book">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="code" type="xs:positiveInteger" />
-                <xs:element name="title" type="xs:string" />
-                <xs:element name="author" maxOccurs="unbounded" />
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+<xs:element name="ZIP">
+<xs:simpleType>
+    <xs:restriction base="xs:positiveInteger">
+      <xs:minInclusive value="1001"/>
+      <xs:maxInclusive value="52080"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element>
 
 
 </xs:schema>

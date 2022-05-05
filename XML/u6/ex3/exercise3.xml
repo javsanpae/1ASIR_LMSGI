@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="exercise3.xsl" type="text/xsl"?>
+<animales>
+
+    <animal especie="perro" nombre="Perruno">
+        <datos peso="18 kg" color="negro"/>
+    </animal>
+
+    <animal especie="gato" nombre="Gatusso">
+        <datos peso="9 Kg" color="canela"/>
+    </animal>
+
+</animales>

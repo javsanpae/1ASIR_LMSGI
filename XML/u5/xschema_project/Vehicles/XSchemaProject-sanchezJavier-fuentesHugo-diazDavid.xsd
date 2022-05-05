@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="vehicles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="car" minOccurs="0" maxOccurs="unbounded" type="T_vehicles" />
+                <xs:element name="motorcycle" minOccurs="0" maxOccurs="unbounded" type="T_vehicles" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+            <xs:group name="transaction_info">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element ref="email" />
+                    <xs:element ref="tel_number" />
+                </xs:sequence>
+            </xs:group>
+
+            <xs:element name="email">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="tel_number">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <!-- Only supported for spain! -->
+                        <xs:pattern value="\+34[0-9]{9}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:attributeGroup name="personal_id">
+                <xs:attribute name="dni-nif" type="xs:string" />
+                <xs:attribute name="sell_number" type="xs:positiveInteger" />
+            </xs:attributeGroup>
+
+    <xs:complexType name="T_vehicles">
+        <xs:sequence>
+            <xs:element ref="best_vehicle_prize" minOccurs="0" />
+
+                        <!-- LIST OF BRANDS -->
+            <xs:element name="brand" type="T_brands" /> 
+
+            <xs:element name="model" type="xs:string"/>
+            <xs:element ref="release_year" />
+            <xs:element ref="extras" />
+            <xs:element name="specs_url" type="xs:anyURI"/>
+            
+                        <!-- nonNegative because a new car can have 0km -->
+            <xs:element name="kilometers" type="xs:nonNegativeInteger" /> 
+            
+            <xs:element ref="price" /> 
+            <xs:element ref="vehicle_data" />
+
+            <xs:element name="seller">
+                <xs:complexType>
+                    <xs:group ref="transaction_info"/>
+                    <xs:attributeGroup ref="personal_id"/>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="buyer">
+                <xs:complexType>
+                    <xs:group ref="transaction_info" />
+                    <xs:attributeGroup ref="personal_id"/>
+                </xs:complexType>
+            </xs:element>
+
+        </xs:sequence>
+        <xs:attribute name="state" type="T_vehicleState" />
+    </xs:complexType>
+
+    <xs:simpleType name="T_vehicleState">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="Brand New|Second Hand|0KM|Almost New|Damaged"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="best_vehicle_prize">
+        <xs:complexType />
+    </xs:element>
+
+    <xs:simpleType name="T_brands">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Toyota" />
+            <xs:enumeration value="Lexus" />
+            <xs:enumeration value="Honda" />
+            <xs:enumeration value="Mazda" />
+            <xs:enumeration value="BMW" />
+            <xs:enumeration value="SEAT" />
+            <xs:enumeration value="Kawasaki" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="release_year">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:gYear">
+                    <!-- This attribute is optional because if the vehicle is from the 2000 for example we already know it's been released. We add the true by default because the majority of cars on these webpages are already released -->
+                    <xs:attribute name="released" type="xs:boolean" use="optional" default="true" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="extras">
+        <xs:complexType>
+            <xs:attribute name="available" type="xs:boolean" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+    
+    <xs:element name="price">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{3,9}€" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="vehicle_data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="hp" />
+
+                <xs:element ref="cilinders" />
+                <!-- From 1 to 12 cilinders -->
+                
+                <xs:element ref="liters" />
+                <xs:element ref="power_source" />
+                <xs:element ref="chassis_sn" />
+                <!-- A serial number consists of 17 alphanumeric characters in this order: 9 numbers and 8 letters -->
+                <xs:element ref="car_plate" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="hp">
+        <xs:simpleType>
+            <xs:restriction base="xs:float">
+                <xs:minInclusive value="10" />
+                <xs:maxInclusive value="1000" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="cilinders">
+        <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger">
+                <xs:minInclusive value="1" />
+                <xs:maxInclusive value="16" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="liters">
+        <xs:simpleType>
+            <xs:restriction base="xs:float">
+                <xs:minInclusive value="0.125" />
+                <xs:maxInclusive value="20" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="power_source">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Gas" />
+                <xs:enumeration value="Electric" />
+                <xs:enumeration value="Fuel" />
+                <xs:enumeration value="Hybrid" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="chassis_sn">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{9}[A-Z]{8}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:simpleType name="unionPlate">
+        <xs:union memberTypes="T_numericPlate T_writtenPlate" />
+    </xs:simpleType>
+
+
+    <xs:simpleType name="T_numericPlate">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="9999" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="T_writtenPlate">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]{3}" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="listPlate">
+        <xs:list itemType="unionPlate" />
+    </xs:simpleType>
+
+    <xs:element name="car_plate">
+        <xs:simpleType>
+            <xs:restriction base="listPlate" />
+        </xs:simpleType>
+    </xs:element>
+
+    
+    <xs:element name="car">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="T_vehicles">
+                    <xs:sequence>
+                        <xs:element ref="equipment" />
+                        <xs:element ref="doors" />
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    
+
+    <xs:element name="equipment">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Comfort" />
+                <xs:enumeration value="Sport" />
+                <xs:enumeration value="Executive" />
+                <xs:enumeration value="GT" />
+                <xs:enumeration value="Basic" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="doors">
+        <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger">
+                <xs:pattern value="[0-7]" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+</xs:schema>

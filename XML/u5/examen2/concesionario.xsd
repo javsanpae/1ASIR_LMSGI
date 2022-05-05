@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="vehiculos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="coche" type="T_coche" />
+                <xs:element name="moto" type="T_moto" />
+            </xs:sequence>
+            <xs:attribute name="tipo_operacion" type="T_tipoVenta" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="T_tipoVenta">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="Venta|Renting" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="T_vehiculo">
+        <xs:sequence>
+            <xs:element name="imagen" type="xs:anyURI" />
+            <xs:element ref="matricula" minOccurs="0" />
+            <xs:element name="marca" type="xs:string" />
+            <xs:element name="modelo" type="xs:string" />
+            <xs:element ref="año" />
+            <xs:element ref="kilometros" />
+            <xs:element ref="combustible" />
+            <xs:element ref="informacion_venta" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="matricula">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="([0-9]{4}[A-Z^AEIÑOQU]{1,2}|[A-Z]{1,2}[0-9]{4}[A-Z^Ñ]{1,2}|C[0-9]{4}[A-Z^AEIÑOQU]{3})" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="año">
+        <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger">
+                <xs:minInclusive value="1980" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="kilometros">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:positiveInteger">
+                    <xs:attribute name="unidad" fixed="Km" type="xs:string" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="combustible">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Gasolina" />
+                <xs:enumeration value="Diésel" />
+                <xs:enumeration value="Eléctrico" />
+                <xs:enumeration value="Híbrido" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="informacion_venta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tipo_vendedor" />
+                <xs:element ref="precio" />
+                <xs:element ref="garantia" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute name="estado" use="required" type="T_estado" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="T_estado">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="Nuevo|Kilómetro 0|Segunda mano" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="tipo_vendedor">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Profesional" />
+                <xs:enumeration value="Particular" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="precio">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:restriction base="xs:decimal">
+                    <xs:fractionDigits value="2" />
+                </xs:restriction>
+            </xs:simpleContent>
+            <xs:sequence>
+                <xs:element ref="financiacion" />
+            </xs:sequence>
+            <xs:attribute name="divisa" fixed="€" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="financiacion">
+        <xs:complexType />
+    </xs:element>
+    
+    <xs:element name="garantia">
+        <xs:complexType>
+            <xs:attribute name="duracion" type="xs:positiveInteger" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="T_coche">
+        <xs:complexContent>
+            <xs:extension base="T_vehiculo">
+                <xs:sequence>
+                    <xs:element ref="detalles_coche" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="detalles_coche">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cambio" />
+                <xs:element ref="potencia" />
+                <xs:element name="puertas" type="xs:positiveInteger" />
+                <xs:element name="color" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="cambio">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Automático" />
+                <xs:enumeration value="Manual" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="potencia">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:restriction base="xs:positiveInteger">
+                    <xs:fractionDigits value="0" />
+                </xs:restriction>
+            </xs:simpleContent>
+            <xs:attribute name="unidad_potencia" fixed="cv" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="T_moto">
+        <xs:complexContent>
+            <xs:extension base="T_vehiculo">
+                <xs:sequence>
+                    <xs:element ref="detalles_moto" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="detalles_moto">
+        <xs:complexType>
+            <xs:all>
+                <xs:element ref="cilindrada" />
+                <xs:element ref="tipo_moto" />
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="cilindrada">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:positiveInteger">
+                    <xs:attribute name="unidad_cilindrada" fixed="cc" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="tipo_moto">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="Ciclomotor|Scooter|Carretera|Off-Road" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+
+
+</xs:schema>
