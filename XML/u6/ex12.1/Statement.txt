@@ -1,0 +1,9 @@
+Create an HTML document from the given XML document, with the following requirements:
+
+- Create a different table for the general and for the IBEX-35 companies. Each table will have borders and 
+the companies will be ordered alphabetically.
+
+- When an IBEX-35 company raises the 80% value, it will create a paragraph behind with the link of the company.
+When they go below 10%, they will not be shown.
+
+- 

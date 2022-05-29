@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="species">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="animal" type="T_BasicFeatures"/>
+        <xs:element ref="plant"/>
+      </xs:choice>
+      <xs:attribute name="region" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+
+    <xs:complexType name="T_BasicFeatures">
+      <xs:sequence>
+        <xs:element name="common_name" type="xs:string" maxOccurs="unbounded"/>
+        <xs:element name="image" type="xs:anyURI"/>
+        <xs:element ref="endemism" minOccurs="0"/>
+        <xs:element ref="conservation_status"/>
+        <xs:element name="appearance" type="xs:string"/>
+        <xs:element ref="habitat"/>
+      </xs:sequence>
+       <xs:attribute name="scientific_name" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:element name="endemism">
+      <xs:complexType/>
+    </xs:element>
+    
+    <xs:element name="conservation_status" default="LC">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="EX|EW|CR|EN|VU|NT|LC"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="habitat">
+      <xs:complexType mixed="true">
+        <xs:sequence>
+          <xs:element name="species" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="plant">
+      <xs:complexType>
+        <xs:complexContent>
+          <xs:extension base="T_BasicFeatures">
+            <xs:sequence>
+              <xs:element ref="altitude"/>
+              <xs:element ref="annual_population"/>
+              <xs:element ref="life_cycle"/>
+            </xs:sequence>
+          </xs:extension>      
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:element>
+    
+        <xs:element name="altitude">
+      <xs:complexType>
+        <xs:all>
+          <xs:element name="minimum_altitude" type="T_altitude"/>
+          <xs:element name="maximum_altitude" type="T_altitude"/>
+        </xs:all>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:simpleType name="T_AltitudePossibleValue">
+      <xs:restriction base="xs:nonNegativeInteger">
+        <xs:maxInclusive value="8848"/>
+      </xs:restriction>
+    </xs:simpleType>
+      
+    
+    <xs:complexType name="T_altitude">
+      <xs:simpleContent>
+        <xs:extension base="T_AltitudePossibleValue">
+          <xs:attribute name="altitude_unit" type="xs:string" fixed="m"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+    
+    <xs:element name="annual_population">
+      <xs:complexType>
+        <xs:simpleContent>
+          <xs:extension base="T_AmountList">
+            <xs:attribute name="since" type="xs:gYear" use="required"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+    </xs:element>
+    
+    <xs:simpleType name="T_AmountList">
+      <xs:list itemType="xs:nonNegativeInteger"/>
+    </xs:simpleType>
+    
+    <xs:element name="life_cycle">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Annual"/>
+          <xs:enumeration value="Biennial"/>
+          <xs:enumeration value="Perennial"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+    
+</xs:schema>

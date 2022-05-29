@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<profesores>
+  <profesor>
+      <codigo>MLA</codigo>
+      <especialidad>Informatica</especialidad>
+    </profesor>
+  <profesor>
+      <codigo>BNA</codigo>
+      <especialidad>P.T.Informatica</especialidad>
+    </profesor>
+</profesores>

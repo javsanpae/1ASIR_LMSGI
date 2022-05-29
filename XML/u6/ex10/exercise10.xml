@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="exercise10.xsl" type="text/xsl"?>
+<Bolsa dia="13/4/2011" hora="11:34">
+
+    <Empresa indice="ibex-35">
+        <Nombre>Timofonica</Nombre>
+        <Simbolo>TF</Simbolo>
+        <Precio>17.11</Precio>
+    </Empresa>
+
+    <Empresa indice="general">
+        <Nombre>TeleBirra</Nombre>
+        <Simbolo>TLB</Simbolo>
+        <Precio>80.05</Precio>
+    </Empresa>
+
+    <Empresa indice="general">
+        <Nombre>General Meters</Nombre>
+        <Simbolo>GMO</Simbolo>
+        <Precio>28.87</Precio>
+    </Empresa>
+
+    <Empresa indice="ibex-35">
+        <Nombre>Adobe</Nombre>
+        <Simbolo>ADB</Simbolo>
+        <Precio>92.25</Precio>
+    </Empresa>
+
+    <Empresa indice="ibex-35">
+        <Nombre>Mocosoft</Nombre>
+        <Simbolo>MSF</Simbolo>
+        <Precio>20.31</Precio>
+    </Empresa>
+
+    <Empresa indice="general">
+        <Nombre>Cola-Loca</Nombre>
+        <Simbolo>COC</Simbolo>
+        <Precio>38.89</Precio>
+    </Empresa>
+
+    <Empresa indice="ibex-35">
+        <Nombre>Moon Microsystems</Nombre>
+        <Simbolo>MMS</Simbolo>
+        <Precio>45.11</Precio>
+    </Empresa>
+
+</Bolsa>

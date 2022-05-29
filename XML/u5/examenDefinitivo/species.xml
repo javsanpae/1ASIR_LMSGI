@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<species xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="./species.xsd">
+    
+    <animal scientific_name="Euphydryas aurinia">
+
+        <common_name>Marsh Fritillary</common_name>
+    
+        <image>Marsh_fritillary.jpg</image>
+
+        <conservation_status>VU</conservation_status>
+
+        <appearance>It has a ....</appearance>
+
+        <habitat></habitat>
+
+    </animal>
+
+</species>

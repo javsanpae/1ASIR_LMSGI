@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<clasificacion>
+
+    <equipo>
+      <denominacion>Real Madrid</denominacion>
+      <jugados>33</jugados>
+    </equipo>
+
+    <equipo>
+      <denominacion>FC Barcelona</denominacion>
+      <jugados>33</jugados>
+    </equipo>
+
+    <equipo>
+      <denominacion>Betis</denominacion>
+      <jugados>33</jugados>
+    </equipo>
+
+</clasificacion>

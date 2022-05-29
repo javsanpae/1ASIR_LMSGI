@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="exercise7.xsl" type="text/xsl"?>
+<grupo>
+
+  <nombre>1DAWM-A</nombre>
+  
+  <asignatura>
+    <codigo>BD</codigo>
+    <nombre>Base de Datos</nombre>
+    <horas>6</horas>
+    <profesor>
+      <codigo>MLA</codigo>
+      <especialidad>Informatica</especialidad>
+    </profesor>
+  </asignatura>
+  
+  <asignatura>
+    <codigo>SI</codigo>
+    <nombre>Sistemas Informaticos</nombre>
+    <horas>6</horas>
+    <profesor>
+      <codigo>BNA</codigo>
+      <especialidad>P.T.Informatica</especialidad>
+    </profesor>
+  </asignatura>
+  
+  
+</grupo>

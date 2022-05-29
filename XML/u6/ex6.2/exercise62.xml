@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="exercise62.xsl" type="text/xsl"?>
+<liga>
+
+    <equipo>
+        <nombre>Real Madrid</nombre>
+        <puntuacion>78</puntuacion>
+        <victorias>24</victorias>
+        <empates>6</empates>
+        <derrotas>3</derrotas>
+    </equipo>
+
+    <equipo>
+        <nombre>FC Barcelona</nombre>
+        <puntuacion>63</puntuacion>
+        <victorias>18</victorias>
+        <empates>9</empates>
+        <derrotas>6</derrotas>
+    </equipo>
+
+    <equipo>
+        <nombre>Betis</nombre>
+        <puntuacion>57</puntuacion>
+        <victorias>17</victorias>
+        <empates>6</empates> 
+        <derrotas>10</derrotas>
+    </equipo>
+
+</liga>

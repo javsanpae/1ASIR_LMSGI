@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="exercise9.xsl" type="text/xsl"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="exercise6.xsl" type="text/xsl"?>
 <liga>
 
     <equipo nombre="Real Madrid">
@@ -21,20 +21,6 @@
         <victorias>17</victorias>
         <empates>6</empates> 
         <derrotas>10</derrotas>
-    </equipo>
-
-    <equipo nombre="Málaga C.F.">
-        <puntuacion>99</puntuacion>
-        <victorias>33</victorias>
-        <empates>0</empates>
-        <derrotas>0</derrotas>
-    </equipo>
-
-    <equipo nombre="Granada C.F.">
-        <puntuacion>77</puntuacion>
-        <victorias>22</victorias>
-        <empates>11</empates>
-        <derrotas>0</derrotas>
     </equipo>
 
 </liga>
